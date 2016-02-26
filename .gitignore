@@ -1,0 +1,106 @@
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.loc
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+
+## Intermediate documents:
+*.dvi
+# these rules might exclude image files for figures etc.
+# *.ps
+# *.eps
+*.pdf
+
+# Editors files:
+*.sublime-workspace # Sublime text
+
+# Session files (Texmaker, TeXstudio)
+*.txss
+*.tks
+
+# HTML files:
+README.html
+
+# GNU plot files
+*.gnuplot
+*.table
+*.gnuplot
+*.gnuplot
+*.table
+*.gnuplot
+*.table
+
+
+# FreeMind files
+*.mm
+
+# Temporary folders
+tmp/
+
+## Bibliography auxiliary files (bibtex/biblatex/biber):
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+## Auxiliary and intermediate files from other packages:
+
+# algorithms
+*.alg
+*.loa
+
+# amsthm
+*.thm
+
+# beamer
+*.nav
+*.snm
+*.vrb
+
+# glossaries
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+
+# hyperref
+*.brf
+
+# listings
+*.lol
+
+# makeidx
+*.idx
+*.ilg
+*.ind
+*.ist
+
+# minitoc
+*.maf
+*.mtc
+*.mtc0
+
+# minted
+*.pyg
+
+# nomencl
+*.nlo
+
+# todonotes
+*.tdo
+
+# xindy
+*.xdy

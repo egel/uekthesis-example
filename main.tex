@@ -1,0 +1,95 @@
+\documentclass[male, authorStatement, indexNumber, fileVersion, keywords, thanks]{lib/uekthesis}
+\usepackage{lib/uekthesis}
+
+%##############################################################################
+% Global Variables - they use UTF-8 encoding characters
+%
+% This is variables to be changed by a user
+%
+\globalFullAuthor{Jan Kowalski}                     % Full author name
+\globalShortAuthor{J. Kowalski}                     % Short author name
+\globalFullTitle{Przygotowanie pracy dyplomowej \\[2mm] wraz z systemem LaTeX}  % Full thesis title
+\globalShortTitle{Praca dyplomowa w systemie \LaTeXe}     % Short thesis title
+\globalFullUniversity{Uniwersytet Ekonomiczny w Krakowie} % Full university name
+\globalShortUniversity{UEK}                           % Short university name
+\globalDepartment{Wydział Zarządzania}                % University department
+\globalDegreeprogramme{Informatyka Stosowana}         % Author degreeprogramme
+\globalThesisType{Praca dyplomowa}                    % Type of thesis
+\globalUnderTheSupervisonOf{Pod kierunkiem}           % Under supervision of text
+\globalSupervisor{prof.~n.~dr~hab.~Jana~Iksińskiego}  % Full title of author's Supervisor
+\globalAcknowledgements{Dla moich rodziców oraz najbliższych przyjaciół za niezłomną wiarę w~moje zwycięstwo.}   % Author's thanks
+\globalFileVersion{0.1.0}   % File version (use for mainly for Git)
+\globalIndexNumber{123456}  % Author index number
+\globalCity{Kraków}         % The city
+\globalYear{2015}           % Year of thesis creation
+\globalKeywords{nauka, komputery, praca dyplomowa, latex, uczelnia, student} % Keywords for the thesis
+
+%##############################################################################
+% Adding other packages
+\usepackage{chngcntr}
+
+%##############################################################################
+% Constant footnote numbers in whole thesis
+\counterwithout{footnote}{chapter}
+
+%##############################################################################
+% Add bibliography compatybile with Biblatex
+\addbibresource{bibliography.bib}
+
+%##############################################################################
+%  Lista słów (dzielenia je, lub nie)
+\hyphenation{LaTeX latex LaTeXu }
+
+%##############################################################################
+% Koniec preambuły i rozpoczęcie treści właściwej dokumentu
+\begin{document}
+  \nocite{*}
+
+  \titlepages
+
+  % List of things to do. How to use it at <https://www.ctan.org/pkg/todonotes>
+  % \listoftodos
+  % \newpage
+
+  % Tu umieszczamy rozdziały w porządanej kolejności
+  \include{chap_0_intro}
+  \include{chap_1_theory}
+  \include{chap_2_practice}
+  \include{chap_3_conclusion}
+
+  % Appendixes
+  % \appendix
+  % \include{dodatekA}
+  % \include{dodatekB}
+  % ect.
+
+  %##############################################################################
+  % Below you will find other lists which usually being appended to thesis.
+  % If you don't want to use one or any of these, just comment it (the % sign
+  % at the begin of a line)
+
+  % Table of content
+  \clearpage
+  \printbibliography[heading=bibintoc]
+
+  % List of tables
+  \clearpage
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{\listtablename}
+  \listoftables
+
+  % List of figures
+  \clearpage
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{\listfigurename}
+  \listoffigures
+
+  % List of listings
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{\lstlistlistingname}
+  \lstlistoflistings
+
+\end{document}
